@@ -14,7 +14,7 @@ class log_in_activity : AppCompatActivity() {
     fun sign_in_button_clicked(view: View) {
         val button = findViewById<Button>(R.id.sign_in_btn)
         button.setOnClickListener {
-            val intent = Intent(this, appointments_activity::class.java)
+            val intent = Intent(this, Appointments::class.java)
             startActivity(intent)
         }
     }
@@ -22,7 +22,7 @@ class log_in_activity : AppCompatActivity() {
     fun sign_up_button_clicked(view: View) {
         val button = findViewById<Button>(R.id.sign_up_btn)
         button.setOnClickListener {
-            val intent = Intent(this, sign_up_activity::class.java)
+            val intent = Intent(this, connect_with_arduino::class.java)
             startActivity(intent)
         }
     }
