@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
@@ -16,6 +18,7 @@ import java.util.Calendar;
 public class Appointments extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     TextView textView;
     Button button;
+    Button add_button;
     int day, month, year, hour, minute;
     int myday, myMonth, myYear, myHour, myMinute;
     @Override
@@ -35,6 +38,13 @@ public class Appointments extends AppCompatActivity implements DatePickerDialog.
                 datePickerDialog.show();
             }
         });
+        add_button = findViewById(R.id.button_add_app);
+        add_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),log_in_activity.class);//AppListActivity
+                startActivity(i);
+            }
+        });
     }
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -52,10 +62,6 @@ public class Appointments extends AppCompatActivity implements DatePickerDialog.
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         myHour = hourOfDay;
         myMinute = minute;
-        textView.setText("Year: " + myYear + "\n" +
-                "Month: " + myMonth + "\n" +
-                "Day: " + myday + "\n" +
-                "Hour: " + myHour + "\n" +
-                "Minute: " + myMinute);
+        textView.setText(myday+"/" + myMonth + "/" + myYear + " at " + hourOfDay +":"+minute+'\n');
     }
 }

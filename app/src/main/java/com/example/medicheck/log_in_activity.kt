@@ -22,7 +22,7 @@ class log_in_activity : AppCompatActivity() {
     fun sign_up_button_clicked(view: View) {
         val button = findViewById<Button>(R.id.sign_up_btn)
         button.setOnClickListener {
-            val intent = Intent(this, connect_with_arduino::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

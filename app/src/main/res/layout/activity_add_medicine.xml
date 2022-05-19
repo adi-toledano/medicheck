@@ -16,48 +16,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="30dp"
-            android:text="הוסף תור"
+            android:text="הוסף תרופה חדשה"
             android:textColor="#6dffbf"
             android:textSize="25dp" />
 
-        <EditText
-            android:id="@+id/appointment_name"
+        <Spinner
+            android:id="@+id/spinner"
+            android:prompt="@string/med_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="שם התור"
-            android:textAlignment="center"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa" />
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"/>
 
-        <EditText
-            android:id="@+id/appointment_place"
+        <Spinner
+            android:id="@+id/spinner2"
+            android:prompt="@string/med_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="מיקום התור"
-            android:textAlignment="center"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa" />
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"/>
 
         <Button
-            android:id="@+id/btnPick"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="בחר תאריך ושעה"/>
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/button_add_app"
+            android:id="@+id/button_pair"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="הוסף תור" />
+            android:text="צמד קופסה חכמה חדשה" />
 
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="הוסף" />
 
     </LinearLayout>
 
