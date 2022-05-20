@@ -12,22 +12,22 @@
         android:orientation="vertical"
         android:padding="25dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="30dp"
-                android:text="Medicheck Registeration"
-                android:textColor="#6dffbf"
-                android:textSize="25dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="Medicheck Registeration"
+            android:textColor="#00BCD4"
+            android:textSize="25dp" />
 
-            <EditText
-                android:id="@+id/first_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="שם פרטי"
-                android:textAlignment="center"
-                android:textColor="#6bfff7"
-                android:textColorHint="#52afaa" />
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="שם פרטי"
+            android:textAlignment="center"
+            android:textColor="#72c6ed"
+            android:textColorHint="#4BB0C3" />
 
             <EditText
                 android:id="@+id/last_name"
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:hint="שם משפחה"
                 android:textAlignment="center"
-                android:textColor="#6bfff7"
+                android:textColor="#72c6ed"
                 android:textColorHint="#52afaa" />
 
             <EditText
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:hint="שנת לידה"
                 android:textAlignment="center"
-                android:textColor="#6bfff7"
+                android:textColor="#72c6ed"
                 android:textColorHint="#52afaa" />
 
             <EditText
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:hint="קופת חולים"
                 android:textAlignment="center"
-                android:textColor="#6bfff7"
+                android:textColor="#72c6ed"
                 android:textColorHint="#52afaa" />
 
             <EditText
@@ -62,18 +62,18 @@
                 android:layout_height="wrap_content"
                 android:hint="מייל"
                 android:textAlignment="center"
-                android:textColor="#6bfff7"
+                android:textColor="#72c6ed"
                 android:textColorHint="#52afaa" />
 
-            <EditText
-                android:id="@+id/et_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="סיסמה"
-                android:inputType="textPassword"
-                android:textAlignment="center"
-                android:textColor="#6bfff7"
-                android:textColorHint="#52afaa" />
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="סיסמה"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="#72c6ed"
+            android:textColorHint="#52afaa" />
 
         <LinearLayout
                 android:layout_width="match_parent"

@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:padding="30dp"
             android:text="הוסף תור"
-            android:textColor="#6dffbf"
+            android:textColor="#72c6ed"
             android:textSize="25dp" />
 
         <EditText
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:hint="שם התור"
             android:textAlignment="center"
-            android:textColor="#6bfff7"
+            android:textColor="#72c6ed"
             android:textColorHint="#52afaa" />
 
         <EditText
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:hint="מיקום התור"
             android:textAlignment="center"
-            android:textColor="#6bfff7"
+            android:textColor="#72c6ed"
             android:textColorHint="#52afaa" />
 
         <Button
