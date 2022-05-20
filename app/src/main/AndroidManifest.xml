@@ -14,7 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Medicheck">
-
         <activity
             android:name=".AppListActivity"
             android:exported="true"

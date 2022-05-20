@@ -23,8 +23,9 @@ public class AppointmentPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment_page);
 
-        this.listView = (ListView)findViewById(R.id.listView);
+        this.listView = (ListView)findViewById(R.id.list_view);
         this.button = (Button)findViewById(R.id.button);
+        this.initListViewData();
 
         // CHOICE_MODE_NONE: (Default)
         // (listView.setItemChecked(..) doest not work with CHOICE_MODE_NONE).
@@ -52,14 +53,12 @@ public class AppointmentPage extends AppCompatActivity {
                 printSelectedItems();
             }
         });
-
-        this.initListViewData();
     }
 
     private void initListViewData()  {
-        UserAccount tom = new UserAccount("Tom","admin");
-        UserAccount jerry = new UserAccount("Jerry","user");
-        UserAccount donald = new UserAccount("Donald","guest", false);
+        UserAccount tom = new UserAccount("טופס 17");
+        UserAccount jerry = new UserAccount("בדיקות דם");
+        UserAccount donald = new UserAccount("צילום בית חזה");
 
         UserAccount[] users = new UserAccount[]{tom,jerry, donald};
 

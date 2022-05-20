@@ -105,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
             filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
-            this.registerReceiver(br, filter);
             final String action = intent.getAction();
             Log.d(TAG, "onReceive: ACTION FOUND.");
 

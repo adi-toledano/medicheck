@@ -9,25 +9,18 @@ public class UserAccount implements Serializable {
 
     private boolean active;
 
-    public UserAccount(String userName, String userType)  {
+    public UserAccount(String userName)  {
         this.userName= userName;
         this.userType = userType;
         this.active= true;
     }
 
-    public UserAccount(String userName, String userType, boolean active)  {
+    public UserAccount(String userName, boolean active)  {
         this.userName= userName;
-        this.userType = userType;
         this.active= active;
     }
 
-    public String getUserType() {
-        return userType;
-    }
 
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
 
     public String getUserName() {
         return userName;
@@ -47,7 +40,7 @@ public class UserAccount implements Serializable {
 
     @Override
     public String toString() {
-        return this.userName +" ("+ this.userType+")";
+        return this.userName;
     }
 
 }
