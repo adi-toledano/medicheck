@@ -15,6 +15,7 @@ import com.example.medicheck.databinding.ActivityAppListBinding
 
 class AppListActivity : AppCompatActivity() {
 
+    var is_arrow_clicked = false
     private lateinit var binding: ActivityAppListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,13 +36,35 @@ class AppListActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val settings_button = findViewById<Button>(R.id.settings_btn)
+        val log_out_button = findViewById<Button>(R.id.log_out_btn)
+        settings_button.setVisibility(View.GONE)
+        log_out_button.setVisibility(View.GONE)
     }
 
-    fun arudino_btn(view: View) {
-        val button = findViewById<Button>(R.id.arduinobtn)
+    fun log_out_button(view: View) {
+        val button = findViewById<Button>(R.id.log_out_btn)
         button.setOnClickListener {
-            val intent = Intent(this, connect_with_arduino::class.java)
+            val intent = Intent(this, log_in_activity::class.java)
             startActivity(intent)
+        }
+    }
+
+    fun arrow_btn_clicked(view: View) {
+        val button = findViewById<Button>(R.id.arrow_btn)
+        val settings_button = findViewById<Button>(R.id.settings_btn)
+        val log_out_button = findViewById<Button>(R.id.log_out_btn)
+        button.setOnClickListener {
+            if(!is_arrow_clicked) {
+                settings_button.setVisibility(View.VISIBLE)
+                log_out_button.setVisibility(View.VISIBLE)
+            }
+            else{
+                settings_button.setVisibility(View.GONE)
+                log_out_button.setVisibility(View.GONE)
+            }
+            is_arrow_clicked=!is_arrow_clicked
         }
     }
 }
