@@ -1,3 +1,4 @@
+/*
 package com.example.medicheck;
 
 import android.Manifest;
@@ -55,10 +56,12 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    /**
+    */
+/**
      * Broadcast Receiver for changes made to bluetooth states such as:
      * 1) Discoverability mode on/off or expire.
-     */
+     *//*
+
     private final BroadcastReceiver mBroadcastReceiver2 = new BroadcastReceiver() {
 
         @Override
@@ -96,10 +99,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    /**
+    */
+/**
      * Broadcast Receiver for listing devices that are not yet paired
      * -Executed by btnDiscover() method.
-     */
+     *//*
+
     private final BroadcastReceiver mBroadcastReceiver3 = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -214,13 +219,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
+    */
+/**
      * This method is required for all devices running API23+
      * Android must programmatically check the permissions for bluetooth. Putting the proper permissions
      * in the manifest is not enough.
      *
      * NOTE: This will only execute on versions > LOLLIPOP because it is not needed otherwise.
-     */
+     *//*
+
     private void checkBTPermissions() {
         if(Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP){
             int permissionCheck = this.checkSelfPermission("Manifest.permission.ACCESS_FINE_LOCATION");
@@ -233,4 +240,4 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "checkBTPermissions: No need to check permissions. SDK version < LOLLIPOP.");
         }
     }
-}
+}*/

@@ -1,7 +1,9 @@
+/*
 package com.example.medicheck;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,14 @@ import java.util.ArrayList;
 
 
 public class DeviceListAdapter extends ArrayAdapter<BluetoothDevice> {
+
+    public static final String DEVICE_EXTRA = "com.example.medicheck.SOCKET";
+    public static final String DEVICE_UUID = "com.example.medicheck.uuid";
+    private static final String DEVICE_LIST = "com.example.medicheck.devicelist";
+    private static final String DEVICE_LIST_SELECTED = "com.example.medicheck.devicelistselected";
+    public static final String BUFFER_SIZE = "com.example.medicheck.buffersize";
+    private static final String TAG = "BlueTest5-MainActivity";
+
 
     private LayoutInflater mLayoutInflater;
     private ArrayList<BluetoothDevice> mDevices;
@@ -36,7 +46,11 @@ public class DeviceListAdapter extends ArrayAdapter<BluetoothDevice> {
             if (deviceName != null) {
                 deviceName.setText(device.getName());
                 if(deviceName.toString()=="BTO5"){
-                    boolean res = device.createBond();
+                    Intent intent = new Intent(getApplicationContext(), Controlling.class);
+                    intent.putExtra(DEVICE_EXTRA, device);
+                    intent.putExtra(DEVICE_UUID, mDeviceUUID.toString());
+                    intent.putExtra(BUFFER_SIZE, mBufferSize);
+                    startActivity(intent);
                     Log.i("creating  motherfucker", "fuck youuuu" + res);
                 }
             }
@@ -48,4 +62,4 @@ public class DeviceListAdapter extends ArrayAdapter<BluetoothDevice> {
         return convertView;
     }
 
-}
+}*/
